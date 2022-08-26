@@ -1,5 +1,6 @@
 
 
+import os
 import requests
 import subprocess
 from base64 import b64encode
@@ -23,7 +24,7 @@ def get_track_url(encstu):
 try:
     usr = input("帳號: ")
     pwd = input("密碼: ")
-    subprocess.run(["clear"])
+    os.system("cls")
 
     login_url = get_login_url(usr, pwd)
     login_info = requests.get(login_url)
@@ -63,3 +64,5 @@ except:
     subprocess.run(["clear"])
     print("學號或密碼輸入錯誤 Orz \n")
     print("(\_/)\n( •_•)\n/> ♥️ >")
+
+_ = input("\n請按任意鍵繼續 ~\n")
